@@ -1,5 +1,5 @@
 
-# 🧠 AGTSU --- Unlearning the Irrelevant
+# 🧠 AGTSU : Unlearning the Irrelevant
 
 **Agatsu (吾勝)** — _"Self-victory" or "Victory over oneself"_ — lies at the heart of this work.  
 Inspired by this concept, our framework advocates not just for better performance, but for **model introspection, refinement, and the selective unlearning of what no longer serves**.  
