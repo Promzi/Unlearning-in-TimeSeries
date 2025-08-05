@@ -1,9 +1,10 @@
 
-# 🧠 AGTSU : Unlearning the Irrelevant
+# 🧠 AGTSU (Attention-Guided Time Series Unlearning)
 
-**Agatsu (吾勝)** — _"Self-victory" or "Victory over oneself"_ — lies at the heart of this work.  
+**Agatsu (吾勝)** — _"Victory over oneself"_ — lies at the heart of this work.  
 Inspired by this concept, our framework advocates not just for better performance, but for **model introspection, refinement, and the selective unlearning of what no longer serves**.  
-By learning to forget spurious patterns, models embody the essence of Agatsu — achieving robustness through **self-directed improvement**.
+
+Hence, by learning to forget spurious patterns, models embody the essence of Agatsu — achieving robustness through **self-directed improvement**.
 
 ---
 
