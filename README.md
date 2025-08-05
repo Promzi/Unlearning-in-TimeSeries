@@ -1,5 +1,11 @@
 
-# 🧠 Unlearning the Irrelevant: Machine Unlearning in Time Series Forecasting and Classification
+# 🧠 AGTSU --- Unlearning the Irrelevant
+
+**Agatsu (吾勝)** — _"Self-victory" or "Victory over oneself"_ — lies at the heart of this work.  
+Inspired by this concept, our framework advocates not just for better performance, but for **model introspection, refinement, and the selective unlearning of what no longer serves**.  
+By learning to forget spurious patterns, models embody the essence of Agatsu — achieving robustness through **self-directed improvement**.
+
+---
 
 This repository accompanies the paper:  
 **"Unlearning the Irrelevant: Machine Unlearning in Time Series Forecasting and Classification" (AAAI-26 Submission)**
