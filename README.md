@@ -31,35 +31,29 @@ We introduce the first end-to-end framework for **selective unlearning in time s
 |---------------------------------------------|-------------|
 | `ADP_score.py`                               | Computes APD score using attention, loss, and deviation. Detects spurious time steps. |
 | `AttentionVectorExtraction.py`              | Extracts and visualizes attention maps (layer-wise) for trained models. |
-| `Model_ADP_TempReplace_forclean.py`         | Core script for spurious segment identification and temporal replacement via attention-context similarity. |
-| `TempReplace.py`                             | Lightweight replacement strategies (context-aware interpolation, autocorr/trend/seasonal alignment). |
+| `Model_ADP_TempReplace_forclean.py`         | Light weight (flexible) script for spurious segment identification and temporal replacement via attention-context similarity. |
+| `TempReplace.py`                             | Heavy weight replacement strategies (context-aware interpolation, autocorr/trend/seasonal alignment). |
 | `Single-seriesAGTSU.py`                     | Implements Temporal-SISA exact unlearning for a single time series. |
 | `Multi-seriesAGTSU_with_ImprovedTempReplace.py` | Full unlearning pipeline across multiple time series, combining APD, replacement, and retraining. |
 | `README.md`                                  | This document. |
-| `Time_Series_Unlearning___AAAI26.pdf`        | The AAAI paper describing the methodology and experiments. |
 
 ---
 
 ## 🔧 Setup Instructions
 
 ### 📦 Dependencies
-Install the required packages:
 
-```bash
-pip install -r requirements.txt
-```
-
-**Required Libraries:**
+**Install Required Libraries:**
 
 - `torch`, `numpy`, `pandas`, `scikit-learn`
 - `matplotlib`, `seaborn`, `scipy`
-- `Autoformer` (from [Autoformer GitHub](https://github.com/thuml/Autoformer))
+- `Autoformer` (from [Autoformer GitHub](https://github.com/thuml/Autoformer)) or the specific State-of-the-art time-series model
 
 ---
 
 ## 🚀 How to Run
 
-### 1. Extract Attention & Visualize
+### To Extract Attention & Visualize
 
 ```bash
 python AttentionVectorExtraction.py
@@ -70,10 +64,10 @@ python AttentionVectorExtraction.py
 
 ---
 
-### 2. Compute APD Scores (Spurious Detection)
+### To Compute APD Scores (Spurious Detection)
 
 ```bash
-python ADP_score.py
+run AttentionVectorExtraction.py + ADP_score.py
 ```
 
 - Computes the Attention-Performance Discrepancy score.
@@ -81,9 +75,11 @@ python ADP_score.py
 
 ---
 
-### 3. Perform Temporal Replacement
+### TO Perform Temporal Replacement
 
 ```bash
+python TempReplace.py 
+or
 python Model_ADP_TempReplace_forclean.py
 ```
 
@@ -92,7 +88,7 @@ python Model_ADP_TempReplace_forclean.py
 
 ---
 
-### 4. Run Multi-Series Unlearning Pipeline
+### To Run Multi-Series Unlearning Pipeline
 
 ```bash
 python Multi-seriesAGTSU_with_ImprovedTempReplace.py
@@ -103,7 +99,7 @@ python Multi-seriesAGTSU_with_ImprovedTempReplace.py
 
 ---
 
-### 5. Apply Exact Unlearning (Temporal SISA)
+### To Run Single-Series Unlearning Pipeline
 
 ```bash
 python Single-seriesAGTSU.py
